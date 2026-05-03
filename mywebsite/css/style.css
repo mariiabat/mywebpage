@@ -1,0 +1,1474 @@
+:root {
+    --bg-main: #ffffff;
+    --bg-header: rgba(244, 197, 131, 1);
+    --text-main: #9C5800;
+    --text-table: black;
+    --text-movie: black;
+    --text-movie-a: black;
+    --text-wordsofme: black;
+    --hero-bg:#F7C887;
+    --hero-shadow: drop-shadow(0px 0px 50px #e89f38);
+    --table-bg: linear-gradient(180deg,rgba(244, 197, 131, 1) 0%, rgba(255, 214, 157, 1) 50%, rgba(255, 234, 204, 1) 100%);
+    --movie-bg: linear-gradient(180deg,rgba(255, 234, 204, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    --item-d-bg: #a06e2d;
+    --item-b-bg:#a97b3a ;
+    --item-k-bg: #e0a551;
+    --item-a-bg: #c79042;
+    --item-s-bg: #d59843;
+    --wordsofme-br: #9C5800;
+    --hr-foot: #9C5800;
+
+}
+body.dark {
+    --bg-main: #000000;
+    --bg-header: #58380D;
+    --text-main: #f5d7a1;
+    --text-table: #F7C887;
+    --text-movie: #f5d7a1;
+    --text-movie-a: #f5d7a1;
+    --text-wordsofme: #f5d7a1;
+    --hero-bg: #56370e;
+    --hero-shadow: drop-shadow(0px 0px 50px #382000);
+    --table-bg: linear-gradient(180deg,rgba(88, 56, 13, 1) 0%, rgba(56, 32, 0, 1) 49%, rgba(50, 28, 0, 1) 100%);
+    --movie-bg: linear-gradient(180deg,rgba(50, 28, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    --item-d-bg: #6e542f;
+    --item-b-bg: #705329;
+    --item-k-bg: #784e14;
+    --item-a-bg: #bf893d;
+    --item-s-bg: #956623;
+    --wordsofme-br: #f5d7a1;
+    --hr-foot: #9C5800;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    overflow-x: hidden;
+    background-color: var(--bg-main);
+}
+header{
+    width: 100%;
+    height: 870px;
+    background-color: var(--bg-header);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.items_head {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 540px;
+    height: 73px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background: rgba(168, 106, 29, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px); /* для Safari */
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+}
+
+.logo {
+    font-family: "Kalam", cursive;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 34px;
+    color: #fff3d6;
+}
+
+.menu-item a{
+    text-decoration: none;
+    color: #fff3d6;
+    transition: 0.3s;
+
+}
+
+.menu-item {
+    color: #fff3d6;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.menu-item:hover {
+    opacity: 0.7;
+}
+
+.divider {
+    width: 1px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.hero-bar {
+    height: 350px;
+    width: 50%;
+    background-color: var(--hero-bg);
+    border-radius: 70% 0px 0px 70%;
+    filter: var(--hero-shadow);
+}
+
+.hero-content h1{
+    margin-top: 15%;
+    margin-left: 17%;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--text-main);
+    font-size: 48px;
+}
+
+.hero-content p{
+    margin-top: 5%;
+    margin-left: 70%;
+    font-family: "Kalam", cursive;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--text-main);
+    font-size: 16px;
+}
+
+.img_head{
+    margin: 20% auto auto 5%;
+}
+
+.img_head img{
+    width: 135px;
+    height: 400px;
+}
+
+.content_table{
+    background: var(--table-bg);
+    margin: 0;
+    height: 750px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.div_table{
+    width: 80%;
+    margin: auto;
+    color: var(--text-table);
+}
+
+.content_table h1{
+    color: var(--text-main);
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 112px;
+}
+
+.div_table table{
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 100%;
+}
+
+
+th, td {
+    border: 1px solid #5c4a2f;
+    padding: 12px;
+    text-align: center;
+}
+
+.content_movie{
+    background: var(--movie-bg);
+    height: 100%;
+    width: 100%;
+    margin-bottom: 100px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.content_movie h1{
+    color: var(--text-main);
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 112px;
+}
+
+.movies{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.movies_item{
+    width: 90%;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.movies_item:hover {
+    transform: translateY(-5px);
+}
+
+.movies_item a{
+    text-decoration: none;
+    outline: none;
+    color: none;
+}
+
+.movies_item h3{
+    margin: 7px;
+}
+
+.movies_item_d{
+    left: 6%;
+    top: 192%;
+    box-shadow: 0 8px 32px rgba(160, 110, 45, 0.35),
+                inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    color: var(--text-movie);
+}
+.movies_item a{color: var(--text-movie-a);}
+.movies_item_d img{width: 48%;}
+
+.movies_item_b{
+    left: 60%;
+    top: 192%;
+    box-shadow: 0 8px 32px rgba(169, 123, 58, 0.35),
+                inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    color: var(--text-movie);
+}
+.movies_item_b img{width: 48%;}
+
+.movies_item_k{
+    left: 34%;
+    top: 220%;
+    box-shadow: 0 8px 32px rgba(224, 165, 81, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    color: var(--text-movie);
+}
+.movies_item_k img{width: 55%;}
+
+.movies_item_a{
+    left: 6%;
+    top: 233%;
+    box-shadow: 0 8px 32px rgba(199, 144, 66, 0.35),
+                inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    color: var(--text-movie);
+}
+.movies_item_a img{width: 56%;}
+
+.movies_item_s{
+    left: 75%;
+    top: 233%;
+    box-shadow: 0 8px 32px rgba(213, 152, 67, 0.35),
+                inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    color: var(--text-movie);
+}
+.movies_item_s img{width: 70%;}
+
+.content_wordsofme{
+    height: 700px;
+    width: 100%;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.content_wordsofme h1{
+    color: var(--text-main);
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.wordsofme_border{
+    border-radius: 22px;
+    background: rgba(186, 108, 0, 5%);
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    border-style: solid;
+    border-color: var(--wordsofme-br);
+    border-width: thin;
+}
+
+.wordsofme_item img{
+    width: 55%;
+}
+
+.wordsofme_item h4{
+    font-size: 24px;
+    text-shadow: 2px 2px 4px #F8B04C;
+    color: var(--text-wordsofme);
+}
+
+.wordsofme{
+    height: 70%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.wordsofme_item2{
+    margin-bottom: 6%;
+}
+
+.wordsofme_item{
+    text-align: center;
+
+}
+
+.container_images{
+    height: 1200px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: right;
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+}
+
+.images img{
+    width: 29%;
+    padding: 1.5%;
+    border-radius: 8%;
+}
+
+.container_images h1{
+    color: var(--text-main);
+    text-shadow: 2px 2px 4px #F8B04C;
+    font-size: 48px;
+    margin-right: 8%;
+    margin-bottom: 2%;
+}
+
+.container_citation{
+    height: 600px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: right;
+}
+
+.container_citation h1{
+    color: var(--text-main);
+    text-shadow: 2px 2px 4px #F8B04C;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+.citation{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.p_citation{
+    font-size: 36px;
+    padding-right: 10%;
+    color: var(--text-wordsofme);
+}
+
+.p_citation p{
+    margin-bottom: 6%;
+}
+
+.img_citation img{
+    height: 100%;
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 50px #e89f38);
+}
+
+.container_kyiv{
+    height: 1500px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    border-radius: 20px;
+}
+
+.container_kyiv h3{
+    font-size: 32px;
+    margin-left: 7%;
+    margin-top: 20px;
+    color: var(--text-wordsofme);
+} 
+
+.h_kyiv{
+    display: flex;
+    align-items: center;
+    margin-left: 7%;
+}
+
+.h_kyiv img{
+    height: 283px;
+}
+
+.h_kyiv h1{
+    margin-top: 90px;
+    font-size: 64px;
+    color: #765221;
+}
+
+.kyiv_images{
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.kyiv_image{
+    min-width: calc(100% / 3);
+    height: 500px;
+    object-fit: cover;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.slider_wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+iframe{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.foot_p{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+footer{height: 100px; color: var(--text-wordsofme);}
+
+footer hr{
+    height: 1px;
+    background-color: var(--hr-foot) ;
+    width: 80%;
+    margin: auto;
+    border: none;
+}
+
+
+
+/* ========== АДАПТИВНИЙ ДИЗАЙН ========== */
+/* Великі екрани (від 1400px) */
+@media screen and (min-width: 1400px) {
+    .hero-content h1 {
+        font-size: 56px;
+    }
+ 
+    .content_table h1,
+    .content_movie h1,
+    .content_wordsofme h1,
+    .container_images h1,
+    .container_citation h1 {
+        font-size: 56px;
+    }
+ 
+    .movies {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+    }
+ 
+    .p_citation {
+        font-size: 40px;
+    }
+ 
+    .h_kyiv h1 {
+        font-size: 72px;
+    }
+ 
+    .container_kyiv h3 {
+        font-size: 36px;
+    }
+}
+ 
+/* Середні десктопи (від 1025px до 1280px) */
+@media screen and (max-width: 1280px) {
+    .hero-content h1 {
+        font-size: 42px;
+        margin-left: 12%;
+    }
+ 
+    .items_head {
+        width: 500px;
+    }
+ 
+    .content_table {
+        height: auto;
+        padding: 60px 0;
+    }
+ 
+    .content_movie {
+        height: auto;
+        padding: 60px 0;
+    }
+ 
+    .movies {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+ 
+    .container_kyiv {
+        height: auto;
+        padding-bottom: 60px;
+    }
+ 
+    .kyiv_image {
+        height: 420px;
+    }
+ 
+    .container_images {
+        height: auto;
+        padding: 60px 0;
+    }
+ 
+    .container_citation {
+        height: auto;
+        padding: 60px 0;
+    }
+ 
+    .content_wordsofme {
+        height: auto;
+        padding: 60px 0;
+    }
+}
+
+/* ========== АДАПТИВНИЙ ДИЗАЙН ========== */
+ 
+/* Великі екрани (від 1400px) */
+@media screen and (min-width: 1400px) {
+    .hero-content h1 {
+        font-size: 56px;
+    }
+ 
+    .content_table h1,
+    .content_movie h1,
+    .content_wordsofme h1,
+    .container_images h1,
+    .container_citation h1 {
+        font-size: 56px;
+    }
+ 
+    .movies {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+    }
+ 
+    .p_citation {
+        font-size: 40px;
+    }
+ 
+    .h_kyiv h1 {
+        font-size: 72px;
+    }
+ 
+    .container_kyiv h3 {
+        font-size: 36px;
+    }
+}
+ 
+/* Середні десктопи (від 1025px до 1280px) */
+@media screen and (max-width: 1280px) {
+    .hero-content h1 {
+        font-size: 42px;
+        margin-left: 12%;
+    }
+ 
+    .items_head {
+        width: 500px;
+    }
+ 
+    .content_table {
+        height: auto;
+        padding: 60px 0;
+    }
+ 
+    .content_movie {
+        height: auto;
+        padding: 60px 0;
+    }
+ 
+    .movies {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+ 
+    .container_kyiv {
+        height: auto;
+        padding-bottom: 60px;
+    }
+ 
+    .kyiv_image {
+        height: 420px;
+    }
+ 
+    .container_images {
+        height: auto;
+        padding: 60px 0;
+    }
+ 
+    .container_citation {
+        height: auto;
+        padding: 60px 0;
+    }
+ 
+    .content_wordsofme {
+        height: auto;
+        padding: 60px 0;
+    }
+}
+ 
+/* Планшети (від 768px до 1024px) */
+@media screen and (max-width: 1024px) {
+    header {
+        height: auto;
+        min-height: 600px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 40px;
+        padding-top: 100px;
+        text-align: left;
+        flex-wrap: nowrap;
+    }
+ 
+    .hero-bar {
+        flex: 1;
+        height: 280px;
+        width: 50%;
+        border-radius: 70% 0 0 70%;
+        display: flex;
+        align-items: center;
+        margin-left: 10%;
+    }
+ 
+    .hero-content h1 {
+        margin-top: 0;
+        margin-left: 14%;
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .hero-content {
+        margin-top: 0;
+        margin-left: 14%;
+    }
+ 
+    .hero-content p {
+        margin-top: 10px;
+        margin-left: 20%;
+        text-align: left;
+        font-size: 15px;
+    }
+ 
+    .img_head {
+        margin: 0 0 0 4%;
+        display: flex;
+        align-items: flex-end;
+        margin-left: 10%;
+    }
+ 
+    .img_head img {
+        width: 110px;
+        height: auto;
+        max-height: 340px;
+        object-fit: contain;
+    }
+ 
+    .divider{
+        width: 1px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.4);
+    }
+ 
+    .items_head {
+        position: fixed;
+        top: 14px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 520px;
+        height: 66px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: rgba(168, 106, 29, 0.6);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-radius: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        z-index: 1000;
+    }
+ 
+    .logo {
+        font-size: 24px;
+    }
+ 
+    .menu-item {
+        font-size: 14px;
+    }
+ 
+    .content_table {
+        height: auto;
+        padding: 50px 0;
+    }
+ 
+    .content_table h1 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+ 
+    .div_table {
+        width: 95%;
+        overflow-x: auto;
+    }
+ 
+    table {
+        font-size: 14px;
+    }
+ 
+    th, td {
+        padding: 8px;
+    }
+ 
+    .content_movie {
+        height: auto;
+        padding: 50px 0;
+    }
+ 
+    .content_movie h1 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+ 
+    .movies {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+ 
+    .content_wordsofme {
+        height: auto;
+        padding: 50px 0;
+    }
+ 
+    .wordsofme {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+ 
+    .wordsofme_item {
+        flex: 0 0 45%;
+    }
+ 
+    .container_images {
+        height: auto;
+        padding: 50px 0;
+    }
+ 
+    .container_images h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-right: 0;
+    }
+ 
+    .container_citation {
+        height: auto;
+    }
+ 
+    .citation {
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+ 
+    .p_citation {
+        font-size: 28px;
+        padding-right: 0;
+    }
+ 
+    .img_citation img {
+        width: 200px;
+        height: auto;
+
+    }
+ 
+    .container_kyiv {
+        height: auto;
+        padding-bottom: 50px;
+    }
+ 
+    .h_kyiv {
+        display: flex;
+        text-align: center;
+        margin-left: 5%;
+    }
+ 
+    .h_kyiv img {
+        height: 150px;
+    }
+ 
+    .h_kyiv h1 {
+        font-size: 48px;
+        margin-top: 20px;
+    }
+ 
+    .kyiv_image {
+        min-width: calc(100% / 2);
+        height: 350px;
+    }
+ 
+    iframe {
+        width: 90%;
+        height: 400px;
+    }
+ 
+    .foot_p {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+ 
+/* Великі планшети / маленькі ноутбуки (від 769px до 900px) */
+@media screen and (max-width: 900px) {
+    .items_head {
+        width: 460px;
+        height: 64px;
+    }
+ 
+    .logo {
+        font-size: 22px;
+    }
+ 
+    .menu-item {
+        font-size: 13px;
+    }
+ 
+    header {
+        height: auto;
+        min-height: 550px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 40px;
+        padding-top: 100px;
+        text-align: left;
+        flex-wrap: nowrap;
+    }
+ 
+    .hero-content h1 {
+        font-size: 32px;
+    }
+ 
+    .movies {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+ 
+    .movies_item {
+        font-size: 20px;
+    }
+ 
+    .wordsofme_item {
+        flex: 0 0 48%;
+    }
+ 
+    .wordsofme_item h4 {
+        font-size: 20px;
+    }
+ 
+    .images img {
+        width: 32%;
+        padding: 1%;
+    }
+ 
+    .kyiv_image {
+        height: 300px;
+    }
+ 
+    .p_citation {
+        font-size: 24px;
+    }
+ 
+    .h_kyiv h1 {
+        font-size: 44px;
+    }
+ 
+    .container_kyiv h3 {
+        font-size: 28px;
+    }
+}
+ 
+/* Мобільні телефони (до 768px) */
+@media screen and (max-width: 768px) {
+    header {
+        height: auto;
+        min-height: 550px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 40px;
+        padding-top: 50px;
+        text-align: left;
+        flex-wrap: nowrap;
+    }
+ 
+    .items_head {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+        height: auto;
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: rgba(168, 106, 29, 0.6);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-radius: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        z-index: 1000;
+    }
+ 
+    .logo {
+        font-size: 20px;
+        text-align: center;
+    }
+ 
+    .divider {
+        height: 20px; 
+        background: rgba(255, 255, 255, 0.4);
+    }
+ 
+    .menu-item {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+ 
+    .hero-bar {
+        flex: 1;
+        height: 280px;
+        width: 50%;
+        border-radius: 70% 0 0 70%;
+        display: flex;
+        align-items: center;
+        margin-left: 10%;
+    }
+ 
+    .hero-content h1 {
+        margin-top: 0;
+        margin-left: 14%;
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .hero-content {
+        margin-top: 0;
+        margin-left: 14%;
+    }
+ 
+    .hero-content p {
+        margin-top: 10px;
+        margin-left: 20%;
+        text-align: left;
+        font-size: 15px;
+    }
+ 
+    .img_head {
+        margin: 0 0 0 4%;
+        display: flex;
+        align-items: flex-end;
+        margin-left: 10%;
+    }
+ 
+    .img_head img {
+        width: 110px;
+        height: auto;
+        max-height: 340px;
+        object-fit: contain;
+    }
+ 
+    .content_table h1 {
+        font-size: 28px;
+    }
+ 
+    .div_table {
+        width: 100%;
+    }
+ 
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+ 
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+ 
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #5c4a2f;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+ 
+    td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #5c4a2f;
+        text-align: right;
+    }
+ 
+    td:last-child {
+        border-bottom: none;
+    }
+ 
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-align: left;
+        margin-right: 15px;
+    }
+ 
+    .content_movie h1 {
+        font-size: 28px;
+    }
+ 
+    .movies {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+ 
+    .movies_item {
+        width: auto;
+    }
+ 
+    .content_wordsofme h1 {
+        font-size: 28px;
+    }
+ 
+    .wordsofme_border {
+        width: 95%;
+        height: auto;
+        padding: 20px 0;
+    }
+ 
+    .wordsofme {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        height: auto;
+    }
+ 
+    .wordsofme_item {
+        width: 80%;
+    }
+ 
+    .wordsofme_item img {
+        width: 40%;
+    }
+ 
+    .wordsofme_item h4 {
+        font-size: 18px;
+    }
+ 
+    .container_images h1 {
+        font-size: 28px;
+    }
+ 
+    .images {
+        align-items: center;
+    }
+ 
+    .images img {
+        width: 30%;
+        padding: 10px;
+    }
+ 
+    .container_citation h1 {
+        font-size: 28px;
+    }
+ 
+    .p_citation {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+ 
+    .p_citation p {
+        margin-bottom: 20px;
+    }
+ 
+    .img_citation img {
+        width: 150px;
+        height: auto;
+    }
+ 
+    .container_kyiv h3 {
+        font-size: 24px;
+        text-align: center;
+        margin-left: 0;
+    }
+ 
+    .h_kyiv h1 {
+        font-size: 36px;
+    }
+ 
+    .kyiv_image {
+        min-width: 100%;
+        height: 250px;
+    }
+ 
+    iframe {
+        width: 95%;
+        height: 300px;
+    }
+ 
+    footer {
+        height: auto;
+        padding: 20px 0;
+        text-align: center;
+    }
+ 
+    .foot_p {
+        flex-direction: column;
+        gap: 15px;
+        font-size: 14px;
+    }
+}
+ 
+/* Середні телефони (від 481px до 600px) */
+@media screen and (max-width: 600px) {
+    .items_head {
+        width: 92%;
+        padding: 10px 12px;
+    }
+ 
+    .logo {
+        font-size: 19px;
+    }
+ 
+    .menu-item {
+        font-size: 11px;
+        padding: 4px 6px;
+    }
+ 
+    .hero-content h1 {
+        font-size: 25px;
+    }
+ 
+    .hero-content p {
+        font-size: 14px;
+    }
+ 
+    .content_table h1,
+    .content_movie h1,
+    .content_wordsofme h1,
+    .container_images h1,
+    .container_citation h1 {
+        font-size: 26px;
+    }
+ 
+    .movies_item {
+        font-size: 20px;
+        padding: 12px;
+    }
+ 
+    .wordsofme_item {
+        width: 90%;
+    }
+ 
+    .wordsofme_item img {
+        width: 35%;
+    }
+ 
+    .wordsofme_item h4 {
+        font-size: 17px;
+    }
+ 
+    .p_citation {
+        font-size: 18px;
+    }
+ 
+    .img_citation img {
+        width: 130px;
+    }
+ 
+    .h_kyiv h1 {
+        font-size: 32px;
+    }
+ 
+    .container_kyiv h3 {
+        font-size: 20px;
+    }
+ 
+    .kyiv_image {
+        height: 220px;
+    }
+ 
+    iframe {
+        height: 260px;
+    }
+}
+ 
+/* Дуже маленькі телефони (до 480px) */
+@media screen and (max-width: 480px) {
+    .items_head {
+        width: 90%;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(168, 106, 29, 0.6);
+        padding: 10px;
+    }
+ 
+    .menu-item {
+        font-size: 10px;
+        padding: 4px;
+    }
+ 
+    .logo {
+        font-size: 18px;
+    }
+ 
+    .divider{
+        height: 15px;
+    }
+ 
+    .hero-content h1 {
+        font-size: 22px;
+    }
+ 
+    .hero-content p {
+        font-size: 14px;
+    }
+ 
+    .content_table h1,
+    .content_movie h1,
+    .content_wordsofme h1,
+    .container_images h1,
+    .container_citation h1 {
+        font-size: 24px;
+    }
+ 
+    .movies_item {
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 14px;
+    }
+ 
+    .wordsofme_item img {
+        width: 30%;
+    }
+ 
+    .wordsofme_item h4 {
+        font-size: 16px;
+    }
+ 
+    .wordsofme_item2 {
+        margin-bottom: 0;
+    }
+ 
+    .p_citation {
+        font-size: 18px;
+    }
+ 
+    .img_citation img {
+        width: 120px;
+    }
+ 
+    .h_kyiv h1 {
+        font-size: 28px;
+    }
+ 
+    .container_kyiv h3 {
+        font-size: 18px;
+    }
+ 
+    .kyiv_image {
+        height: 200px;
+    }
+ 
+    iframe {
+        height: 200px;
+    }
+ 
+    footer {
+        padding: 15px 0;
+    }
+ 
+    .foot_p {
+        font-size: 12px;
+        gap: 10px;
+    }
+}
+ 
+/* Крихітні екрани (до 360px) */
+@media screen and (max-width: 360px) {
+    .items_head {
+        width: 96%;
+        border-radius: 16px;
+        gap: 2px;
+    }
+ 
+    .logo {
+        font-size: 15px;
+    }
+ 
+    .menu-item {
+        font-size: 9px;
+        padding: 3px;
+    }
+ 
+    .divider {
+        height: 12px;
+    }
+ 
+    .hero-content h1 {
+        font-size: 18px;
+    }
+ 
+    .hero-content p {
+        font-size: 12px;
+    }
+ 
+    .content_table h1,
+    .content_movie h1,
+    .content_wordsofme h1,
+    .container_images h1,
+    .container_citation h1 {
+        font-size: 20px;
+    }
+ 
+    .movies_item {
+        font-size: 16px;
+        padding: 8px;
+        border-radius: 12px;
+    }
+ 
+    .wordsofme_item {
+        width: 95%;
+    }
+ 
+    .wordsofme_item h4 {
+        font-size: 14px;
+    }
+ 
+    .p_citation {
+        font-size: 15px;
+        padding: 0 8px;
+    }
+ 
+    .img_citation img {
+        width: 100px;
+    }
+ 
+    .h_kyiv h1 {
+        font-size: 24px;
+    }
+ 
+    .container_kyiv h3 {
+        font-size: 16px;
+    }
+ 
+    .kyiv_image {
+        height: 170px;
+    }
+ 
+    iframe {
+        height: 180px;
+    }
+ 
+    th, td {
+        font-size: 12px;
+        padding: 6px;
+    }
+ 
+    footer {
+        padding: 12px 0;
+    }
+ 
+    .foot_p {
+        font-size: 11px;
+    }
+}
+ 
+/* Landscape-режим на телефонах */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    header {
+        min-height: auto;
+        height: auto;
+        padding: 80px 20px 30px;
+    }
+ 
+    .items_head {
+        position: fixed;
+        top: 10px;
+        height: 54px;
+        width: 80%;
+    }
+ 
+    .hero-bar {
+        width: 60%;
+        margin-top: 20px;
+    }
+ 
+    .hero-content h1 {
+        font-size: 24px;
+        margin-top: 10%;
+    }
+ 
+    .hero-content p {
+        margin-top: 3%;
+        font-size: 13px;
+    }
+ 
+    .img_head img {
+        width: 60px;
+    }
+ 
+    .kyiv_image {
+        height: 200px;
+        min-width: 50%;
+    }
+ 
+    iframe {
+        height: 220px;
+    }
+ 
+    .content_table,
+    .content_movie,
+    .content_wordsofme {
+        padding: 30px 0;
+    }
+}
